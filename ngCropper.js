@@ -113,7 +113,7 @@ angular.module('ngCropper', ['ng'])
 
       context.drawImage(image, data.x, data.y, data.width, data.height, 0, 0, data.width, data.height);
 
-      var encoded = canvas.toDataURL(file.type);
+      var encoded = canvas.toDataURL(file.type, 1.0);
       removeElement(canvas);
 
       return _decodeBlob(encoded);
@@ -152,7 +152,7 @@ angular.module('ngCropper', ['ng'])
 
       context.drawImage(image, 0, 0, widthOrig, heightOrig, 0, 0, width, height);
 
-      var encoded = canvas.toDataURL(file.type);
+      var encoded = canvas.toDataURL(file.type, 1.0);
       removeElement(canvas);
 
       return _decodeBlob(encoded);
